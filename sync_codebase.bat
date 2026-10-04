@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 set CHANGED=
-for /f "tokens=*" %%i in ('git status --porcelain') do (
+for /f "tokens=*" %%i in ('git status --porcelain app.py requirements.txt README.md .gitignore start_journal.sh start_journal.bat sync_codebase.sh sync_codebase.bat 2^>nul') do (
     set CHANGED=1
 )
 
